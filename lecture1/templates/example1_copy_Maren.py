@@ -23,8 +23,14 @@ def argmax(values):
 
     imax = 0
     vmax = values[0]
+    N = len(values)
 
-    for i in range(1,len(values)): 
+    if N == 0: 
+        raise ValueError('attempt to get argmax of an empty sequence')
+    
+
+
+    for i in range(1,N): 
         if vmax < values[i]:
             vmax = values[i]
             imax = i
@@ -40,6 +46,7 @@ def main():
     # Use argmax() to locale the maximum
 
     imax, vmax = argmax(values)
+    imax, vmax = argmax([])
 
     # ADD YOUR IMPLEMENTATION HERE
     print(f'The maximum value of the values are {vmax}, the position of this value is {imax}')
