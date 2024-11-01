@@ -23,7 +23,9 @@ def utility(c):
         Per-day utility derived from consumption
     """
 
-    # ADD YOUR IMPLEMENTATION HERE
+    buns = 100
+    c1_cand = np.linspace(0, buns, 101)
+    
 
 
 def utility_total(c1, c2):
