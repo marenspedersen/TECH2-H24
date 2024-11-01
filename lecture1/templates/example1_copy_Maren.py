@@ -21,6 +21,16 @@ def argmax(values):
         Maximum value
     """
 
+    imax = 0
+    vmax = values[0]
+
+    for i in range(1,len(values)): 
+        if vmax < values[i]:
+            vmax = values[i]
+            imax = i
+        
+    return imax, vmax
+
 
 def main():
 
@@ -29,8 +39,10 @@ def main():
 
     # Use argmax() to locale the maximum
 
-    # ADD YOUR IMPLEMENTATION HERE
+    imax, vmax = argmax(values)
 
+    # ADD YOUR IMPLEMENTATION HERE
+    print(f'The maximum value of the values are {vmax}, the position of this value is {imax}')
 
 if __name__ == '__main__':
     main()
