@@ -21,8 +21,6 @@ def argmax(values):
         Maximum value
     """
 
-    values
-
 
 def main():
 
